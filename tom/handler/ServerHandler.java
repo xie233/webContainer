@@ -42,7 +42,7 @@ public class ServerHandler  extends ChannelInboundHandlerAdapter{
             }
         }
         System.out.println(response1.getContent());
-        ctx.writeAndFlush(response1);
+        ctx.writeAndFlush(response1).addListener(ChannelFutureListener.CLOSE);;
 
     }
 
