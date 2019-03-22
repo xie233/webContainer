@@ -18,7 +18,7 @@ public class RequestDecoder extends ByteToMessageDecoder {
 
 
 
-        int readable = byteBuf.readableBytes();// 获取buffer所有的可读字节（header + body）
+        int readable = byteBuf.readableBytes();
         byte[] bytes = new byte[readable];
 
         byteBuf.readBytes(bytes);
